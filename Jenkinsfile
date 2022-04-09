@@ -4,7 +4,7 @@ pipeline {
         stage('log version info') {
       steps {
         sh 'docker --version'
-        sh 'mvn --version'
+        sh 'docker-compose up'
       }
     }
   }
