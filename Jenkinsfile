@@ -9,16 +9,25 @@ pipeline {
     }
     stage('Generate HTML report') {
        steps {
-        cucumber buildStatus: 'UNSTABLE',
-                reportTitle: 'My report',
-                fileIncludePattern: '**/*.json',
-                trendsLimit: 10,
-                classifications: [
-                    [
-                        'key': 'Browser',
-                        'value': 'Firefox'
-                    ]
-                ]
+        // cucumber buildStatus: 'UNSTABLE',
+        //         reportTitle: 'My report',
+        //         fileIncludePattern: '**/*.json',
+        //         trendsLimit: 10,
+        //         classifications: [
+        //             [
+        //                 'key': 'Browser',
+        //                 'value': 'Firefox'
+        //             ]
+        //         ]
+
+        publishHTML (target: [
+      allowMissing: false,
+      alwaysLinkToLastBuild: false,
+      keepAll: true,
+      reportDir: 'cucumber-html-reports',
+      reportFiles: 'overview-features.html',
+      reportName: "RCov Report"
+    ])
     }
     }
   }
