@@ -24,7 +24,7 @@ pipeline {
       allowMissing: false,
       alwaysLinkToLastBuild: false,
       keepAll: true,
-      reportDir: 'cucumber-html-reports',
+      reportDir: 'target/cucumber-html-reports',
       reportFiles: 'overview-features.html',
       reportName: "RCov Report"
     ])
