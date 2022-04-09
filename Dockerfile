@@ -12,8 +12,8 @@ RUN cd /home/sampleTest
 WORKDIR /home/sampleTest    
 # RUN git clone https://github.com/hawisback/karate.git
 # WORKDIR /home/sampleTest/karate
-RUN git clone https://github.com/jagadish12/SampleTest.git
-WORKDIR /home/sampleTest/SampleTest
+RUN git clone https://github.com/aftab-mannan/SIMPLI-API.git
+WORKDIR /home/sampleTest/SIMPLI-API
 
 # CMD mvn -e test
 # RUN mvn install:install-file -DgroupId="com.intuit.karate" -DartifactId="karate-parent" -Dversion="1.1.0" -Dpackaging="jar" -Dfile="karate-parent-1.1.0.jar"

@@ -1,11 +1,11 @@
 version: '3.8'
 services:
   karate-tests:
-    image: karate-tests-2
+    image: karate-tests-3
     build:
       context: .
       dockerfile: ./Dockerfile
     volumes: 
-      - ./target:/home/sampleTest/SampleTest/target
+      - ./target:/home/sampleTest/SIMPLI-API/target
       - ~/.m2:/root/.m2
     command: mvn test
